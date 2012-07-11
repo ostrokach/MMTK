@@ -1,0 +1,55 @@
+include README LICENSE LICENCE MANIFEST.in
+include tviewer
+include MMTK/ForceFields/force_fields
+include MMTK/ForceFields/Amber/*parm*
+include MMTK/ForceFields/Amber/frcmod*
+include MMTK/Database/Atoms/*
+include MMTK/Database/Groups/*
+include MMTK/Database/Molecules/*
+include MMTK/Database/Proteins/*
+include MMTK/Database/PDB/*
+recursive-include Include *.pxi
+recursive-include Include *.pxd
+include Src/*.c
+include Src/*.i
+include Src/*.h
+include Src/*.pyx
+include Src/*opt
+recursive-include Include *.h
+exclude test/*
+exclude Test/*
+include Tests/*.py
+include config/*.c
+include Doc/CHANGELOG
+include Doc/*.rst
+include Doc/Makefile
+include Doc/conf.py
+include Doc/make_example_template.py
+include Doc/tviewer.1
+recursive-include Doc/Examples *
+recursive-include Doc/HTML *
+recursive-include Examples *.py
+recursive-include Examples *.c
+recursive-include Examples *.pyx
+include Examples/Forcefield/README
+exclude Examples/Forcefield/HarmonicOscillator/Cython/*.c
+exclude Examples/Forcefield/ElectricField/Cython/*.c
+include Examples/MolecularDynamics/argon.conf.gz
+include Examples/LangevinDynamics/*.c
+include Examples/LangevinDynamics/ranf.h
+include Examples/LangevinDynamics/README
+include Examples/MDIntegrator/README
+prune Examples/Forcefield/HarmonicOscillator/C/build
+prune Examples/Forcefield/HarmonicOscillator/C/dist
+prune Examples/Forcefield/HarmonicOscillator/Cython/build
+prune Examples/Forcefield/HarmonicOscillator/Cython/dist
+prune Examples/Forcefield/ElectricField/C/build
+prune Examples/Forcefield/ElectricField/C/dist
+prune Examples/Forcefield/ElectricField/Cython/build
+prune Examples/Forcefield/ElectricField/Cython/dist
+prune Examples/MDIntegrator/build
+prune Examples/MDIntegrator/dist
+recursive-include Tools *.py
+include MMTK/Tools/TrajectoryViewer/README
+exclude *~
+exclude ._*
