@@ -1,0 +1,21 @@
+* New features
+
+** TODO [#C] Make energy gradients available for subsets of the total force field
+
+
+* Improvements
+
+** DONE [#A] Alert for data base conflicts
+At every database access, check if there are multiple definitions in
+different directories of the search path and alert the user of the
+possible conflict.
+
+
+** TODO Force fields in trajectories
+Add mod_file=... to the force field description in a trajectory file. If upon opening of the trajectory the mod_files exist, use them, otherwise don't raise an exception.
+
+* Bugs
+
+** TODO [#C] Opening a trajectory written for a universe created from a MoleculeFactory doesn't work.
+
+** TODO Trajectory test fails for ParallelepipedicPeriodicUniverse in readParticleTrajectory
